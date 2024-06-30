@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path');
 const app = express()
 const port = 5000
 
@@ -10,7 +11,7 @@ app.use('/js', express.static(__dirname + '/js'))
 app.use('/Images', express.static(__dirname + '/Images'))
 
 // Set View's
-app.set('views', '/view');
+app.set('views', path.join(__dirname, 'view'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
