@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/newindex.css" />
+
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="innercontainer">
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <div id="bar" class="bar">
+          <div id="bar1"></div>
+          <div id="bar2"></div>
+          <div id="bar3"></div>
+        </div>
+
+        <div class="nav">
+          <div id="cart-sts" style="background-color: red;" width="50px" height="50px"><h3 id="count"></h3></div>
+          <img src="../Images/icons8-cart-50.png" alt="no_img" id="cart" width="7%" />
+          <img src="../Images/logo.png" alt="no_img" id="logo2" width="10%" />
+          <span id="lgospn">FoodCourt</span>
+          <nav class="nav1">
+            <img src="../Images/logo.png" alt="no_img" id="logo" />
+            <span>FoodCourt</span>
+            <a href="#" id="im3"
+              ><img
+                src="../Images/profilelogo.png"
+                onclick="redirectToProfile()"
+                alt="no_img"
+                width="80%"
+            /></a>
+            <a href="#fooditems-display">Order</a>
+            <a href="#contact">Contact</a>
+            <a href="/Order">Cart</a>
+            <!-- <a href="/sample">sample</a> -->
+            <a href="#" id="loginsts" onclick="redirectToLogin()"></a>
+            <a href="#" id="im2"
+              ><img
+                src="../Images/profilelogo.png"
+                onclick="redirectToProfile()"
+                alt="no_img"
+                width="80%"
+            /></a>
+          </nav>
+        </div>
+        <aside class="asi">
+          <a href="https://www.instagram.com/miteedu/" class="i i1"
+            ><img src="../Images/aside/instagram.png" alt="no_img" id="lg1"
+          /></a>
+          <a href="https://youtube.com/@MITEEdu" class="i i2"
+            ><img src="../Images/aside/youtube.png" alt="no_img" id="lg2"
+          /></a>
+          <a href="https://www.linkedin.com/company/miteedu/" class="i i3"
+            ><img src="../Images/aside/linkedin.png" alt="no_img" id="lg3"
+          /></a>
+        </aside>
+      </div>
+      <div class="innercontainer2">
+        <!-- <form action="#" method="post" id="ss">
+            
+            <input type="search" name="srch" id="searchInput" placeholder="Search..." autocomplete="">
+            <button type="button" id="searchButton">Search</button>
+        </form> -->
+        <h1>Food Court</h1>
+        <p>We Serve With Love and Care!</p>
+      </div>
+      <div class="innercontainer3">
+        <div class="s s1">
+          <img src="../Images/signup.png" alt="no_img" height="90%" />
+        </div>
+        <div class="s s2">
+          <img src="../Images/foodmain1.jpg" alt="no_img" height="90%" />
+        </div>
+        <div class="s s3">
+          <img src="../Images/golibaje1.webp" alt="no_img" height="90%" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ***************************Content part************************************* -->
+
+    <div class="content-container">
+        <div class="menu">
+            <h2 id="category">Categories: <span>
+              <img id="down-arrow" src="../Images/icons8-expand-arrow-32.png" width="15vw" alt="no_img" onclick="openfilter('menu-list','down-arrow','up-arrow')">
+              <img id="up-arrow" src="../Images/icons8-up-arrow-25.png" alt="no_img" width="15vw" onclick="closefilter('menu-list','down-arrow','up-arrow')"></span></h2>
+              <ul id="menu-list">
+                <li id="Food" class="fooditem-list" onclick="category('Food',this)" >All</li>
+                
+              </ul>
+            
+            <h2>Veg/Non-Veg:<span>
+              <img id="down-arrow2" width="15vw" src="../Images/icons8-expand-arrow-32.png" alt="no_img" onclick="openfilter('veg-nonveg-category','down-arrow2','up-arrow2')">
+             <img id="up-arrow2" width="15vw" src="../Images/icons8-up-arrow-25.png" alt="no_img" onclick="closefilter('veg-nonveg-category','down-arrow2','up-arrow2')"></span></h2>
+             <ul id="veg-nonveg-category">
+              <li id="veg" class="veg-nonveg" onclick="toggleCategory('veg',this)">veg</li>
+              <li id="nonveg" class="veg-nonveg" onclick="toggleCategory('nonveg', this)">nonveg</li>
+              </ul>
+
+              <!-- <button id="movetocart"><a href="../Html/Order.html">Go To Cart</a></button> -->
+        </div>
+        <h2 id="for-mobile-interface">Highest ordered food item: </h2>
+        <div class="scroll-container">
+          
+          <div class="content" id="content">
+           
+            <!-- <div class="heighest-ordered-food-item">
+                
+
+            </div> -->
+           
+          </div>
+        </div>
+        <h2 id="for-mobile-interface">Food Item List :</h2>
+        <div class="fooditems-display" id="fooditems-display"> 
+            
+            
+            
+        </div>
+        <div id="notification" class="notification">
+          <span id="notificationText"></span>
+        </div>
+        <div class="right-end-content">
+            <h2>Highest ordered food item:</h2>
+            <div class="food-item-content" id="content">
+                
+
+            </div>
+           
+            
+        </div>
+    </div>
+    
+    <!-- ******************************************************************************************** -->
+    <footer class="foot" id="contact">
+
+        <img src="../Images/logo.png" alt="no_img" height="20%">
+        <span>FoodCourt</span>
+        <hr color="grey">
+        <p> MITEFood <br> Moodabidre <br>
+            Phone: 9087654321 <br>
+            <a href="mailto:mitefood@gmail.com" target="_blank">mail:mitefood@gmail.com</a>
+        </p>
+    </footer>
+    <!-- Import Firebase App -->
+    <script src="../js/windowcheck.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+    <script src="../js/disableinspect.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
+    <script src="../js/connection_db.js"></script>
+    <script src="../js/newindex.js"></script>
+  </body>
+</html>

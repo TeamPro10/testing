@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="/css/AdminDashboard.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="../Images/icons8-hamburger-24.png" alt="no_img" id="hamburger-open">
+    <img src="../Images/icons8-cancel-50.png" alt="no_img" id="hamburger-cancel">
+    <div class="sidebar">
+      <div class="element">
+        <img src="../Images/icons8-forward-24.png" alt="no_img">
+        <span>
+          <h3 id="item1"><a href="/AdminDashboard">Home</a></h3>
+        </span>
+      </div>
+     
+      <!-- <div class="element">
+        <img src="../Images/icons8-forward-24.png" alt="no_img">
+        <span>
+          <h3 ><a href="/OrdersTobePrepared">Orders To be Prepared</a></h3>
+        </span>
+      </div> -->
+      
+
+
+    </div>
+    <div class="navbar-text">Admin Dashboard</div>
+    <button class="logout-button">Log Out</button>
+  </div>
+  <div class="main-container">
+    <!-- <div class="dashboard"></div> -->
+    <div class="dashboard-right">
+      <h2>Orders Prepared</h2><br>
+      <table class="table table-prep">
+          <thead>
+              <tr>
+                  <th>Prepared Orders</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+            <td id="prepared-orders">
+              <!-- <span id="prep_tk">44</span> -->
+              
+              
+            </td>
+            
+          </tbody>
+      </table><br><br>
+
+      <h2>Orders to be Prepared</h2><br>
+      <table class="table table-orders">
+          <thead>
+              <tr>
+                  <th>Sl No</th>
+                  <th>Item Name</th>
+                  <th>Number of Items</th>
+                  <!-- <th>Token(Time)</th> -->
+                  <!-- <th>.</th> -->
+              </tr>
+          </thead>
+      </table><br><br>
+
+      <div>
+          <div class="done_order"></div><br><br>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Item Name</th>
+                      <th>Number of Items</th>
+                      <th>Time</th>
+                      <th>done</th>
+                  </tr>
+              </thead>
+              <tbody class="content">
+                <!-- <tr>
+                  <td>1</td>
+                  <td>Item A</td>
+                  <td>10:00 AM</td>
+                  <td><button>Click Me</button></td>
+              </tr> -->
+              </tbody>
+          </table><br><br>
+          <div class="done_order2"></div><br><br>
+      </div>
+    </div>
+</div>
+  <br>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+  <script src="../js/disableinspect.js"></script>
+  <script src="../js/connection_db.js"></script>
+  <script src="../js/orderstobeprepared.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./display.css"> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        .dashboard {
+            box-sizing: border-box;
+            position: relative;
+            background: bisque;
+
+
+
+
+        }
+
+        .dashboard h2 {
+
+            padding: 10px;
+            width: 20%;
+        }
+
+        .table {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        tr {
+
+            height: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+            text-align: center;
+            font-size: 90px;
+
+            line-height: 200px;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        /* Define the rotating animation */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Apply the rotating animation to thead element */
+        .rotate th{
+            animation: rotate 5s linear infinite;
+            /* Adjust the duration and timing function as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <h1>Token Number</h1>
+
+        <table style="width:100%" class="table tbody">
+            <thead class="rotate">
+                <tr>
+                    <th>Table Header 1</th>
+                    <th>Table Header 2</th>
+                    <th>Table Header 3</th>
+                </tr>
+            </thead>
+            <tbody></tbody> <!-- Ensure you have a tbody element -->
+        </table>
+    </div><br>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <script src="../js/connection_db.js"></script>
+    <!-- <script src="./display.js"></script> -->
+
+
+    <script>
+        var database = firebase.database();
+
+        const db = firebase.firestore();
+        const settings = { timestampsInSnapshots: true };
+        db.settings(settings);
+        const usersRef = db.collection("Users");
+
+        let prepared_display = database.ref("PreparedDisplay");
+
+        let ham = document.getElementById("hamburger-open");
+        let cancel = document.getElementById("hamburger-cancel");
+        let sidebar = document.querySelector(".sidebar");
+
+
+        var table = document.querySelector(".table");
+
+
+        function formatTime(time) {
+            var formattedTime = new Date("2000-01-01 " + time).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+            return formattedTime;
+        }
+
+
+        prepared_display.on("value", function (snapshot) {
+            let checkedItem = snapshot.val();
+            console.log(checkedItem);
+            table.innerHTML = "";
+
+            for (let key in checkedItem) {
+                if (checkedItem.hasOwnProperty(key)) {
+                    var newRow = document.createElement("tr");
+                    newRow.setAttribute("data-token-number2", key);
+                    newRow.innerHTML = `
+                        <th>${checkedItem[key].TokenNumber}</th>
+                        
+                    `;
+
+                    var allRows = table.querySelectorAll("tr[data-token-number2]");
+                    var firstCell = newRow.querySelector("td:first-child");
+                    if (firstCell) {
+                        firstCell.textContent = allRows.length + 1;
+                    }
+
+                    table.appendChild(newRow); // Corrected this line
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

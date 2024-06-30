@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  height: 100%;
+  filter: brightness(100%) contrast(106%);
+}
+
+.maincontainer {
+  height:130vh;
+  width: 100%;
+
+  background-color: rgb(217, 217, 215);
+}
+
+#items{
+  position: relative;
+  top: 0;
+  /* right: 10%; */
+}
+/* .innercontainer img{
+  filter: brightness(80%) contrast(106%);
+} */
+.innercontainer nav img {
+  position: relative;
+  right: 22%;
+  filter: saturate(110%);
+}
+
+.innercontainer nav span {
+  position: relative;
+  right: 22%;
+  /* filter: saturate(110%); */
+}
+
+#im2 {
+  /* width: 10%; */
+  border: 0px solid transparent;
+  position: relative;
+  left: 24%;
+}
+
+#im3 {
+  display: none;
+}
+
+.innercontainer nav {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  /* left: 10px; */
+  height: 5%;
+  width: 98.8%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.innercontainer nav a {
+  font-size: medium;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  color: rgb(110, 100, 100);
+  padding: 1%;
+  margin-left: 6%;
+  position: relative;
+  right: 3%;
+}
+
+.innercontainer nav a:hover {
+  color: rgb(26, 65, 81);
+  -webkit-text-stroke: 0.4px rgb(26, 65, 81);
+  border-bottom: 4px solid rgb(26, 65, 81);
+}
+
+.innercontainer2 {
+  width: 60%;
+  height: 50vh;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  /* background-color: antiquewhite; */
+  padding: 3%;
+}
+
+#logo2 {
+  display: none;
+}
+
+#lgospn {
+  display: none;
+}
+
+.menu h1 {
+  position: relative;
+  bottom: 8%;
+}
+
+.menu {
+  height: 30vh;
+  width: 90%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  background-color: whitesmoke;
+}
+
+.menu:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu::-webkit-scrollbar {
+  width: 0.2vw;
+  /*width of the entire scrollbar*/
+}
+
+.menu::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 1%;
+  /* color of the tracking area*/
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background-color: rgb(47, 48, 46);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /*roundness of the scroll thumb*/
+  border: 2px solid rgb(52, 51, 50);
+  /* creates padding around scroll thumb*/
+}
+
+.order-page ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 30px;
+}
+
+.cancel {
+  width: 10%;
+  display: none;
+}
+
+.menu {
+  margin-right: 50px;
+}
+
+.ul li {
+  list-style: none;
+}
+
+.cart {
+  position: relative;
+  top: 5%;
+  /* right: 15%; */
+  padding: 3%;
+  /* width: 70vw; */
+  background-color: whitesmoke;
+}
+
+.cart:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+  /* display: flex;
+    justify-content: space-between; */
+  border-radius: 3px;
+  padding: 0.7%;
+  /* width: 3vw; */
+  border: 2px solid rgba(47, 63, 233, 0.589);
+  background-color: rgba(47, 63, 233, 0.861);
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 0.6em;
+  cursor: pointer;
+}
+
+#clear-cart {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  padding: 1.2%;
+  width: 15%;
+  position: relative;
+  right: 0%;
+  /* border-radius: 10px; */
+  border: 2px solid #a80303dd;
+  background-color: #ab0606dd;
+}
+button#pay:disabled {
+  background-color: #ccc; 
+  color: #666; 
+  border-color: #ccc;
+}
+
+#pay {
+  font-size: small;
+  padding: 1.2%;
+  width: 15%;
+  position: relative;
+  right: 0%;
+  /* border-radius: 10px; */
+  border: 2px solid rgb(28, 165, 4);
+  background-color: rgb(28, 165, 4);
+}
+.order-details input[type="time"] {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+}
+
+/* .order-details {
+  margin-top: 20px;
+}
+
+.order-details label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.order-details input[type="time"] {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+}
+
+//Optional: Adjust the appearance of the time input for different browsers 
+.order-details input[type="time"]::-webkit-datetime-edit {
+  padding: 5px;
+}
+
+.order-details input[type="time"]::-webkit-inner-spin-button,
+.order-details input[type="time"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.order-details input[type="time"]::-webkit-clear-button {
+  display: none;
+} */
+
+@media screen and (max-width: 768px) {
+  .menu h1 {
+    position: relative;
+    top: 0.1%;
+    /* bottom: 15%; */
+    right: 3%;
+  }
+
+  .cancel {
+    width: 40%;
+  }
+
+  button {
+    padding: 3%;
+  }
+  #items{
+    position: relative;
+    right:12%;
+  }
+  .menu {
+    height: 80%;
+    padding: 10%;
+    width: 70vw;
+    position: relative;
+    right: 15%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid rgb(250, 245, 245);
+  }
+  #clear-cart{
+    position: relative;
+    right: 10%;
+  }
+  #clear-cart,#pay {
+   
+    font-size: small;
+    padding: 3.5%;
+    width: 40%;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  #im2 {
+    display: none;
+  }
+
+  #im3 {
+    display: block;
+    position: relative;
+    left: 10px;
+  }
+
+  .nav {
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: white;
+  }
+
+  .maincontainer {
+    overflow: scroll;
+  }
+
+  .innercontainer .nav1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* border-radius: 100%; */
+    height: 96vh;
+    width: 70vw;
+    z-index: 1;
+    transform: translateX(-320px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #bar {
+    display: block;
+    position: relative;
+    bottom: 30px;
+    /* background-color: rgb(39, 40, 41); */
+    background-color: transparent;
+    border: 2.4px solid rgb(109, 107, 107);
+    width: 5vw;
+    height: 2.3vh;
+    padding: 1vh;
+    border-radius: 3px;
+    margin: 14px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s ease;
+  }
+
+  #bar1 {
+    position: relative;
+    top: 2px;
+    bottom: 18px;
+
+    width: 5vw;
+    height: 0.6vh;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    background-color: #323030;
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #bar2 {
+    position: relative;
+    bottom: 18px;
+    top: 2px;
+    width: 5vw;
+    height: 0.6vh;
+    margin-bottom: 2px;
+
+    border-radius: 3px;
+    background-color: #323030;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #bar3 {
+    position: relative;
+    bottom: 18px;
+    top: 2px;
+
+    width: 5vw;
+    height: 0.6vh;
+
+    border-radius: 3px;
+    background-color: #323030;
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #checkbox {
+    opacity: 0%;
+    /* width: 10px;
+      height: 10px; */
+    /* padding: 50px; */
+    display: block;
+    height: 32px;
+    width: 30px;
+    position: relative;
+    left: 4vw;
+    top: 2.5vh;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .maincontainer .innercontainer input[type="checkbox"]:checked ~ .nav .nav1 {
+    transform: translateX(0px);
+  }
+
+  input[type="checkbox"]:checked ~ .bar #bar1 {
+    transform: rotate(45deg);
+    position: relative;
+    left: 4px;
+  }
+
+  input[type="checkbox"]:checked ~ .bar #bar2 {
+    transform: scaleY(0);
+  }
+
+  input[type="checkbox"]:checked ~ .bar #bar3 {
+    transform: rotate(-45deg);
+    position: relative;
+    left: 4px;
+  }
+
+  #logo2 {
+    display: block;
+    position: relative;
+    left: 88%;
+    top: 19%;
+  }
+
+  #lgospn {
+    display: block;
+    margin-right: 70%;
+    position: relative;
+    left: 69%;
+    bottom: 28%;
+  }
+
+  #pay {
+    width: 30%;
+  }
+
+  .cart {
+    position: relative;
+    top: 5%;
+    right: 15%;
+    padding: 10%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid rgb(248, 244, 244);
+    width: 70vw;
+    background-color: whitesmoke;
+  }
+}

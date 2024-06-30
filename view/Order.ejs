@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+  <div class="maincontainer">
+
+    <div class="innercontainer">
+
+      <input type="checkbox" name="" id="checkbox">
+      <div id="bar" class="bar">
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+        <div id="bar3"></div>
+
+      </div>
+
+      <div class="nav">
+        <img src="../Images/logo.png" alt="no_img" id="logo2" width="10%">
+        <span id="lgospn">FoodCourt</span>
+        <nav class="nav1">
+          <img src="../Images/logo.png" alt="no_img" id="logo">
+          <span>FoodCourt</span>
+          <a href="#" id="im3"><img src="../Images/profilelogo.png" onclick="redirectToProfile()" alt="no_img"
+              width="80%"></a>
+          <a href="/index">Home</a>
+          <!-- <a href="#contact">Contact</a> -->
+          <!-- <a href="../Html/Order.html">Cart</a> -->
+          <a href="#" id="loginsts" onclick="redirectToLogin()"></a>
+          <a href="#" id="im2"><img src="../Images/profilelogo.png" onclick="redirectToProfile()" alt="no_img"
+              width="80%"></a>
+        </nav>
+
+      </div>
+      <div class="innercontainer2">
+        <div class="order-page" id="order-page">
+          <h1 id="items">Items</h1><br>
+          <div class="menu">
+
+            <ul>
+              <!-- <button class="cancel">Cancel</button> -->
+              <!-- <li>
+                <h3>Burger</h3>
+                <p>Rs.100</p>
+                <button class="cancel">Cancel</button>
+              </li><br> -->
+
+
+            </ul>
+
+          </div><br>
+          <button id="clear-cart" onclick="clearCart();">Clear Cart</button>
+        </div> <br>
+        <hr>
+        <div class="cart" id="Cart">
+          <h2>Cart</h2>
+          <br>
+
+          <div class="order-details">
+            <label for="order-time">Select Delivery Time:</label>
+            <input type="time" id="order-time" name="order-time">
+          </div>
+
+          <br>
+
+          <span>Total amt: Rs. 0.00</span><br><br>
+
+          <input type="checkbox" name="terms_condition" id="t_and_c">
+          <small>I agree with the <a href="/termsandconditions" target="_blank">Terms and Conditions</a></small>
+          <br>
+          <div class="cart-buttons">
+            <button id="pay" disabled>Pay</button>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!-- Processing Payment Checkout -->
+    <div id="payment-form"></div>
+  
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="../js/razorpay.js"></script>
+  <script src="../js/connection_db.js"></script>
+  <!-- <script src="../js/disableinspect.js"></script> -->
+  <!-- <script src="../js/connection_db.js"></script> -->
+  <script src="../js/order.js"></script>
+</body>
+
+</html>

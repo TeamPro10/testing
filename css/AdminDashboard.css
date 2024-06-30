@@ -1,0 +1,476 @@
+/* Add your CSS styles here */
+
+body {
+  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+
+  background-color: #3d3c3c;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-text {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+#hamburger-open {
+  cursor: pointer;
+}
+
+#hamburger-cancel {
+  display: none;
+  width: 2%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.sidebar img {
+  width: 18%;
+  /* font-size: 8em; */
+}
+
+.element {
+  /* text-decoration: none; */
+  width: 92%;
+  /* background-color: #a94848; */
+  display: grid;
+  grid-template-columns: 10% 90%;
+  position: relative;
+  top: 5%;
+  left: 5%;
+  padding: 1%;
+  cursor: pointer;
+  color: #333;
+}
+.element img{
+  width: 50%;
+  position: relative;
+  top: 40%;
+}
+.element:hover {
+  border-bottom: 3px solid #333;
+  background-color: #cbc9c9d2;
+}
+
+.element span a {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar {
+  width: 20vw;
+  height: 100vh;
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  /* padding: 10%; */
+  transform: translateX(-1666px);
+  transition: 1s;
+  z-index: 2;
+  background-color: rgb(252, 252, 252);
+}
+
+.logout-button {
+  margin-right: 20px;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard-left,
+.dashboard-right {
+  /* display: inline-block; */
+  width: 96%;
+  padding: 20px;
+}
+
+.table-unchecked,
+.table-checked {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-unchecked th,
+.table-unchecked td,
+.table-checked th,
+.table-checked td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th,
+table td {
+  border:1px  black;
+  border-style:dotted;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+
+  background-color: #4d88ff;
+  color: #fff;
+}
+table {
+  width: 98%;
+  border:1px solid black;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.popup-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.close-popup {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.clear-button{
+  background-color: #23793a;
+  color: white;
+  width: 98%;
+  padding:8px;
+  position: relative;
+  top: 4px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.table-prep tbody td {
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+}
+
+#prepared-orders {
+  white-space: normal; /* Allow content to wrap to the next line */
+  overflow-x: auto;
+}
+
+#prepared-orders span {
+  margin-right: 10px;
+  background-color: #008CBA;
+  padding: 10px;
+  border-radius: 130px;
+  color: white;
+  margin-bottom: 10px; /* Add margin-bottom to create space between spans on a new line */
+}
+
+#download_btn {
+  position: relative;
+  left: 15px;
+  background-color: #4c70af;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#clear_btn {
+  background-color: #ff3333;
+  /* Red color */
+  color: #fff;
+  /* White text */
+  padding: 10px 20px;
+  /* Adjust padding for better appearance */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* Adjust font size as needed */
+  position: relative;
+  left: 10px;
+
+  /* Responsive styles */
+  @media only screen and (max-width: 768px) {
+
+    padding: 11px 16px;
+    font-size: 14px;
+  }
+}
+
+#close {
+  background-color: #ff3333;
+  /* Red color */
+  color: #fff;
+  /* White text */
+  padding: 10px 20px;
+  /* Adjust padding for better appearance */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* Adjust font size as needed */
+  position: relative;
+
+  /* left: 5px; */
+  /* Responsive styles */
+  @media only screen and (max-width: 768px) {
+
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* Add more styles as needed */
+
+@media only screen and (max-width: 768px) {
+  body{
+    /* width: fit-content; */
+    display: flexbox;
+    width: fit-content;
+    
+    height: fit-content;
+  }
+  
+  
+  .dashboard-left,
+.dashboard-right {
+  
+  width: auto;
+  
+}
+  table,
+  .table {
+    width: 95%;
+  }
+
+  .table-prep{
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+  }
+  
+  #hamburger-cancel {
+    display: none;
+    width: 6%;
+  }
+  .sidebar{
+    width: 100%;
+  }
+  .sidebar img {
+    width: 20px;
+    /* font-size: 8em; */
+  }
+
+  .element {
+    width: 94%;
+    border-bottom: 2px solid #333;
+    font-size: .8em;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+    top: 5%;
+    left: 0%;
+    padding: 3%;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .navbar-text {
+    margin-left: 15px;
+  }
+
+
+
+  .clear-button,
+  .confirm-button,
+  .cancel-button,
+  .logout-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+
+
+  /* Adjust the width of the file input cell */
+  #td-file {
+    width: 20%;
+    overflow: hidden;
+  }
+
+  /* MobileView */
+  
+ 
+  .navbar {
+    /* width: 100vw; */
+    padding: 10px;
+    font-size: .7em;
+  }
+
+  .received-button {
+     position: relative;
+     
+     right: 20px;
+     width: 90%;
+     height: 20px;
+    
+    /* position: relative; */
+    /* top: 40px; */
+  }
+}
+
+/* Common style for all action buttons */
+.action-button {
+  background-color: #008CBA;
+  color: white;
+  /* border: none; */
+  width: 100%;
+  border-radius: 5px;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  /* margin: 2px 2px; */
+  cursor: pointer;
+  background-color: white;
+}
+
+/* Style for the confirm button */
+.confirm-button {
+  border-color: #4CAF50;
+}
+
+/* Style for the cancel button */
+.cancel-button {
+  border-color: #f44336;
+}
+
+/* Style for the view button */
+.view-button {
+  border-color: #008bbad4;
+}
+
+.item-time{
+  display: none;
+}
+
+
+/* button received */
+.received-button {
+  height: 35px;
+  margin-left: 25%;
+  padding: 0.9em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.received-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.received-button:active {
+  color: #000;
+}
+
+.received-button:active:after {
+  background: transparent;
+}
+
+.received-button:hover:before {
+  opacity: 1;
+}
+
+.received-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* -------- */
+.received-button:disabled {
+  background-color: #ff3333; /* Red color for disabled state */
+  color: #ffffff; /* White text color for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate non-interactivity */
+  /* Add any other styling you want for the disabled state */
+}

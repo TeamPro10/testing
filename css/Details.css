@@ -1,0 +1,76 @@
+/* ../css/Details.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6476a0; /* Dark background color */
+    color: #fff; /* Text color */
+  }
+  
+  .dashboard-right {
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #61dafb; /* Header text color */
+    background-color: #1e222b; /* Header background color */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #61dafb; /* Border color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  h2:hover {
+    background-color: #1a1f27; /* Darker background on hover */
+  }
+  
+  .table-checked {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #373c47; /* Table background color */
+    border: 2px solid #525a65; /* Table border color */
+  }
+  
+  .table-checked th, .table-checked td {
+    border: 1px solid #525a65; /* Table cell border color */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-checked th {
+    background-color: #1e222b; /* Header background color */
+  }
+  
+  .table-checked tbody tr:hover {
+    background-color: #464d58; /* Hover effect for table rows */
+  }
+  
+  #download_btn, #clear_btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  #download_btn {
+    margin-left: 37%;
+    background-color: #4caf50; /* Green button color */
+    color: white;
+  }
+  
+  #clear_btn {
+    margin-left: 2px;
+    background-color: #f44336; /* Red button color */
+    color: white;
+  }
+  
+  #download_btn:hover, #clear_btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  

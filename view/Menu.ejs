@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
+    <title>Food Items</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Food Menu</h1>
+        <div class="menu" id="menu-container">
+            <!-- Categories and food items will be dynamically generated here -->
+        </div>
+        <!-- Add this button at an appropriate place in your HTML -->
+        <button id="submit-menu" onclick="refreshPage()">Submit Menu</button>
+    </div>
+
+    <div class="container">
+        <h2>Add New Dish</h2>
+        <form id="add-dish-form">
+            <label for="dish-name">Dish Name:</label>
+            <input type="text" id="dish-name" required><br>
+
+            <label for="dish-price">Price:</label>
+            <input type="number" id="dish-price" required><br>
+
+            <label for="dish-quantity">Quantity:</label>
+            <input type="number" id="dish-quantity" value="1" required><br>
+            
+            <label for="dish-category">Category:</label>
+            <select id="dish-category" onchange="handleCategoryChange()">
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="dish-vegnonveg">veg/nonveg-Category:</label>
+            <select id="dish-vegnonveg" >
+                <option value="veg">veg</option>
+                <option value="nonveg">Nonveg</option>
+            </select>
+
+            <label for="display-category">Display Category:</label>
+            <select id="display-category">
+                <option value="Breakfast">Breakfast</option>                   
+                <option value="Chinese">Chinese</option>
+                <option value="Snacks and Beverages ">Juices and Chats </option>
+                
+            </select>
+
+            <!-- Custom Category Input (Initially Hidden) -->
+            <div id="custom-category-input" style="display: none;">
+                <label for="custom-category">Enter Custom Category:</label>
+                <input type="text" id="custom-category" required>
+            </div>
+        
+            <button type="button" id="save-dish-button">Save</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <h2>Remove Item or Category</h2>
+        <form id="remove-form">
+            <label for="remove-type">Select Action:</label>
+            <select id="remove-type">
+                <option>Choose</option>
+                <option value="remove-item">Remove Item</option>
+                <option value="remove-category">Remove Category</option>
+            </select><br>
+
+            <div id="remove-item-section">
+                <label for="remove-item-category">Select Category:</label>
+                <select id="remove-item-category"></select><br>
+                <label for="remove-item-name">Select Item:</label>
+                <select id="remove-item-name"></select><br>
+            </div>
+
+            <div id="remove-category-section">
+                <label for="remove-category-name">Select Category:</label>
+                <select id="remove-category-name"></select><br>
+            </div>
+
+            <button type="button" id="remove-button">Remove</button>
+            <br><br><br>
+                <h2>Reset Token:</h2>
+                <center><button id="reset_token" class="styled-button">Reset-Token</button></center>
+            
+        </form>
+    </div><br>
+    <!-- <div id="remove-item-section">
+    <h2>Reset Token:</h2>
+    <center><button id="reset_token" class="styled-button">Reset-Token</button></center>
+    </div> -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+    <script src="../js/connection_db.js"></script>
+    <script src="../js/disableinspect.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Style for the category container */
+.category-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+/* Style for the "FOOD MENU" heading */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Style for the "Save" button */
+button {
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media query for responsiveness (for screens up to 768px) */
+@media (max-width: 768px) {
+    .category-container {
+        width: 100%;
+    }
+
+    .food-item-container {
+        width: 100%;
+    }
+
+    /* Reduce font size for the "FOOD MENU" heading on mobile */
+    h1 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+}
+
+/* Style for the food item container with a border */
+.food-item-container {
+    border: 1px solid #ccc; /* Add a border to each food item container */
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px; /* Add margin to separate food items */
+}
+
+/* CSS for the Edit button within the food item container */
+.food-item-container .edit-button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    position: absolute;
+    right: 10px; /* Position the button at the right of each food item container */
+    top: 50%; /* Position the button in the middle of each food item container */
+    transform: translateY(-50%); /* Vertically center the button */
+}
+
+.food-item-container .edit-button:hover {
+  
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* Add your additional styling here */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#food-menu {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-container {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.food-item-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+.food-item-container select{
+    padding: 5px;
+    margin-right: 10px;
+}

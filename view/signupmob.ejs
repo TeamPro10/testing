@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
+   <link rel="stylesheet" href="../css/signup.css">
+   <title>Signup</title>
+
+   <style>
+    .google-sign-in {
+        
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        padding: 15px 30px;
+        /* 1.5 times the original padding */
+        border: none;
+        border-radius: 4px;
+        display: inline-block;
+        cursor: pointer;
+        background-image: url('../Images/search.png');
+        /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* Cover the entire button with the background image */
+        background-position: center;
+        /* Center the background image */
+        position: relative;
+        top: 2vh;
+        left: 20vw;
+    }
+   
+   
+   
+   
+       </style>
+</head>
+
+<body>
+   <div class="container">
+      <div class="inner1">
+         <h1>Sign <span>Up</span></h1>
+         <div class="reset">
+            <div class="GloginForm">
+                  <h2 >SignIn with Google: </h2>
+                  <a  id="login"><i class="google-sign-in"></i></a>
+                  <h3>or</h3>
+            </div>      
+            <form>
+               
+                  
+               <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" placeholder="Username">
+               </div>
+               <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" placeholder="Email">
+               </div>
+               <div class="form-group">
+                  <label for="phone">Phone Number:</label>
+                  <input type="text" pattern="[6789][0-9]{9}" minlength="10" maxlength="10" id="phone" name="phone"
+                     placeholder="Phone number">
+               </div>
+               <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="pwd" name="password" minlength="8" placeholder="Password"><br><br>
+               </div>
+               <div class="form-group">
+                  <input type="submit" value="Submit" id="submit">
+               </div>
+               <div>
+                  <p class="signup-link">Already have an account? <a href="/loginmob">Sign-in</a></p>
+                </div>
+            </form>
+        
+      </div>
+
+      <div class="inner2">
+         <img src="../Images/sign up2.webp" alt="Signup Image">
+      </div>
+</div>
+   <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+   
+   <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+
+
+   <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+   <script src="../js/connection_db.js"></script>
+   <script src="../js/disableinspect.js"></script>
+   <script type="module" src="../js/signup.js"></script>
+   <!-- Import Firebase App -->
+   <!-- <script>
+      document.getElementById("submitButton").addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Get the entered username and password
+          const username = document.getElementById("usernameInput").value;
+          const password = document.getElementById("passwordInput").value;
+          
+          // Check if username and password match the criteria
+          if (username === "mite" && password === "mite@1234") {
+              // Redirect to AdminDashboard.html for the specific user
+              localStorage.setItem("inputValue", username);
+              window.location.href = "/AdminDashboard";
+          } else {
+              
+
+              // Retrieve the entered email and password
+              const email = document.getElementById("usernameInput").value;
+              const password = document.getElementById("passwordInput").value;
+
+              // Initialize Firebase Authentication
+              // firebase.initializeApp(firebaseConfig);
+              const auth = firebase.auth();
+
+              // Attempt to sign in the user with email and password
+              auth.signInWithEmailAndPassword(email, password)
+                  .then((userCredential) => {
+                      // Signed in
+                      const user = userCredential.user;
+                      console.log("Login successful");
+
+                      // Store the email (username) in localStorage
+                      localStorage.setItem("inputValue", email);
+
+                      // Redirect to the target page
+                      const targetPageLink = `/index?username=${email}`;
+                      window.location.href = targetPageLink;
+                  })
+                  .catch((error) => {
+                      var errorCode = error.code;
+                      var errorMessage = error.message;
+                      console.error(`Login failed. Error code: ${errorCode}, Message: ${errorMessage}`);
+                  });
+          }
+      });
+  </script> -->
+
+  <script type="module">
+      // Import the functions you need from the Firebase SDK
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { GoogleAuthProvider, getAuth, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+      import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+      
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const provider = new GoogleAuthProvider(app);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      // Get the login button elements
+      const loginButton = document.getElementById('login');
+      const login1Button = document.getElementById('login1');
+
+      // Function to handle sign-in with Google
+      const signInWithGoogle = async () => {
+          // Sign in with Google popup
+          try {
+              const result = await signInWithPopup(auth, provider);
+              const user = result.user;
+              console.log("Sign-in with Google successful", user);
+
+              // Check if the user already exists in Firestore
+              const userDoc = doc(db, "Users", user.email);
+              const userSnap = await getDoc(userDoc);
+
+              // If the user doesn't exist, save their information to Firestore
+              if (!userSnap.exists()) {
+                  await setDoc(userDoc, {
+                      UserName: user.displayName,
+                      Email: user.email,
+                      Phone: user.phone || "", // Make phone number optional
+                      // Add any other fields you want to save
+                  });
+                 
+                  console.log("User information saved to Firestore");
+              } else {
+                  console.log("User already exists in Firestore");
+              }
+
+              // Redirect to another page after successful sign-in
+              console.log("Login successful",user.email);
+
+                  // Store the email (username) in localStorage
+                  localStorage.setItem("inputValue", user.email);
+  
+                  // Redirect to the target page
+                  const targetPageLink = `/index?username=${user.email}`;
+                  window.location.href = targetPageLink;
+          } catch (error) {
+              // Handle Errors here.
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.error("Sign-in with Google error", errorCode, errorMessage);
+          }
+      };
+
+      // Add click event listeners to the login buttons
+      loginButton.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent the default behavior of the anchor
+          signInWithGoogle();
+      });
+
+      
+  </script>
+  
+   
+   
+
+
+</body>
+
+</html>

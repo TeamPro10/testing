@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="utf-8" /> 
+    <meta content= 
+        "This is a demo of Web integration  
+        of Razorpay in NodeJS"  
+        author="Jeevan J" /> 
+    <title>Razorpay Web-Integration</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head> 
+  
+<body> 
+    <hr/> 
+    <h2>FoodCourt MITE</h2> 
+    <h3>Description</h3> 
+  
+    <ul> 
+        <li>Breakfast,Meals,fastfood,Bevarages,Chats,Icecream</li> 
+        <li> 
+          Available in MITE
+        </li> 
+        <li>limited quantity!</li> 
+    </ul> 
+  
+    <span> Cost:- 99 Rupees  
+        <button id="pay" > 
+            Pay Now & Get Access 
+        </button>  
+    </span> 
+    <hr/> 
+  
+    <!-- Processing Payment Checkout -->
+    <div id="payment-form"></div>
+</body> 
+<!--Inside index.html -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script> 
+<script src="../js/razorpay.js"></script>
+  
+</html>

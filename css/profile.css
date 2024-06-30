@@ -1,0 +1,587 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  background-color: white;
+  top: 3vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 0;
+}
+/* navbar */
+#logo {
+  height: 100%;
+  filter: brightness(100%) contrast(106%);
+}
+.innercontainer nav img {
+  position: relative;
+  right: 22%;
+  filter: saturate(110%);
+}
+.innercontainer nav span {
+  position: relative;
+  right: 22%;
+  /* filter: saturate(110%); */
+}
+#im2 {
+  /* width: 10%; */
+  border: 0px solid transparent;
+  position: relative;
+  left: 24%;
+}
+#im3 {
+  display: none;
+}
+.innercontainer nav {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  /* left: 10px; */
+  height: 8%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.innercontainer nav a {
+  font-size: medium;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  color: rgb(110, 100, 100);
+  padding: 1%;
+  margin-left: 7%;
+  position: relative;
+  right: 3%;
+}
+.innercontainer nav a:hover {
+  color: rgb(26, 65, 81);
+  -webkit-text-stroke: 0.4px rgb(26, 65, 81);
+  border-bottom: 4px solid rgb(26, 65, 81);
+}
+#logo2 {
+  display: none;
+}
+#lgospn {
+  display: none;
+}
+/* ** */
+/* profile logo */
+.image-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+  background-color: cadetblue;
+}
+/* side logo */
+.image-part img {
+  border-radius: 50vh;
+}
+/* text style */
+table,
+tr,
+td {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bill-info p {
+  font-family: "Times New Roman", Times, serif;
+  /* font-size:20px; */
+}
+.image-part2 h1 {
+  padding: 15px; /* Adjust the value as per your desired spacing */
+}
+.image-part2 h1,
+.image-part2 h2 {
+  margin-bottom: 10px; /* Adjust the value as per your desired spacing */
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* order details */
+
+.food-cell {
+  /* margin-left: 5vw; */
+  border: 3px solid #ffb993;
+  border-radius: 15px;
+  height: 13vh;
+  padding: 5px;
+  width: 100%;
+  font-size: 80%;
+  background-color: antiquewhite;
+}
+
+.quantity-cell {
+  border: 3px solid #ffb993;
+  font-size: 80%;
+  border-radius: 15px;
+  height: 9vh;
+  padding: 5px;
+  background-color: antiquewhite;
+}
+.bill-cell {
+  border: 3px solid #ffb993;
+  border-radius: 15px;
+  padding: 3%;
+
+  background-color: antiquewhite;
+}
+/* **** */
+.profile-container {
+  /* background-color: antiquewhite; */
+  border: grey 2px solid;
+  height: 100vh;
+  padding: 20px;
+}
+
+.profile-info {
+  margin-top: 20px;
+}
+
+.profile-info table {
+  width: 100%;
+}
+
+.profile-info table td {
+  padding: 30px;
+
+  font-size: 80%;
+  border: grey 2px solid;
+  font-family: "Times New Roman", Times, serif;
+}
+.summary-part {
+  padding: 10px;
+}
+.summary-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+  /* font-size: 20%; */
+  border-radius: 10%;
+  /* background-color: antiquewhite; */
+  height: 10vh;
+  margin-top: 20px;
+}
+
+.summary-content .image-part2 {
+  /* padding: 25px; */
+
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-content .image-part2 h2 {
+  background-color: antiquewhite;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-content .order-info {
+  /* background-color:  antiquewhite; */
+  display: flex;
+  border: grey 3px solid;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+
+  padding: 10px 0;
+}
+#nodatafound {
+  display: none;
+  position: relative;
+  left: 10%;
+}
+
+
+/*  responsive layout */
+@media screen and (max-width: 768px) {
+  .container {
+    position: relative;
+    top: -4vh;
+  }
+  #logo {
+    display: none;
+  }
+  .nav span {
+    display: none;
+  }
+  #im2 {
+    display: none;
+  }
+  #im3 {
+    display: block;
+    position: relative;
+    left: 10px;
+  }
+  .nav {
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: white;
+  }
+  .innercontainer .nav1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* border-radius: 100%; */
+    height: 100vh;
+    width: 70vw;
+    z-index: 1;
+    transform: translateX(-320px);
+    transition: transform 0.5s ease-in-out;
+  }
+  #bar {
+    display: block;
+    position: relative;
+    bottom: 30px;
+    /* background-color: rgb(39, 40, 41); */
+    background-color: transparent;
+    border: 2.4px solid rgb(109, 107, 107);
+    width: 10vw;
+    height: 5vh;
+    padding: 1vh;
+    border-radius: 3px;
+    margin: 14px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s ease;
+  }
+
+  #bar1 {
+    position: relative;
+    top: 2px;
+    bottom: 18px;
+
+    width: 5vw;
+    height: 0.6vh;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    background-color: #323030;
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  #bar2 {
+    position: relative;
+    bottom: 18px;
+    top: 2px;
+    width: 5vw;
+    height: 0.6vh;
+    margin-bottom: 2px;
+
+    border-radius: 3px;
+    background-color: #323030;
+    transition: transform 0.2s ease-in-out;
+  }
+  #bar3 {
+    position: relative;
+    bottom: 18px;
+    top: 2px;
+
+    width: 5vw;
+    height: 0.6vh;
+
+    border-radius: 3px;
+    background-color: #323030;
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  #checkbox {
+    opacity: 0%;
+    /* width: 10px;
+    height: 10px; */
+    /* padding: 50px; */
+    display: block;
+    height: 32px;
+    width: 30px;
+    position: relative;
+    left: 4vw;
+    top: 2.5vh;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .innercontainer input[type="checkbox"]:checked ~ .nav .nav1 {
+    transform: translateX(0px);
+  }
+  input[type="checkbox"]:checked ~ .bar #bar1 {
+    transform: rotate(45deg);
+    position: relative;
+    left: 4px;
+  }
+  input[type="checkbox"]:checked ~ .bar #bar2 {
+    transform: scaleY(0);
+  }
+  input[type="checkbox"]:checked ~ .bar #bar3 {
+    transform: rotate(-45deg);
+    position: relative;
+    left: 4px;
+  }
+  #logo2 {
+    display: block;
+    position: relative;
+    left: 88%;
+    top: 19%;
+  }
+  #lgospn {
+    display: block;
+    margin-right: 70%;
+    position: relative;
+    left: 69%;
+    bottom: 28%;
+  }
+
+  #nodatafound {
+    position: relative;
+    left: 20%;
+  }
+  .container {
+    grid-template-columns: 100%;
+  }
+
+  .profile-container {
+    height: 90vh;
+  }
+  .profile-info table td {
+    padding: 20px;
+
+    font-size: 80%;
+    border: grey 2px solid;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .summary-content {
+    grid-template-columns: 100%;
+    height: auto;
+    font-size: 1em;
+  }
+  .summary-content .order-info {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    line-height: 130%;
+  }
+  .bill-cell {
+    width: 100%;
+    padding: 8vw;
+    border: 3px solid #ffb993;
+  }
+  .quantity-cell {
+    border: 3px solid #ffb993;
+    width: 58vw;
+  }
+  .food-cell {
+    border: 3px solid #ffb993;
+    width: 100%;
+  }
+  .user-tokens h2{
+  
+    margin:10%;
+  }
+  .token {
+    width: 100%;
+}
+
+#order-details-container {
+    position: relative;
+    left: 0%;
+    /* right:8vw; */
+    max-width: 90%;
+}
+}
+/* Your existing CSS */
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+/* Add this CSS in your style or in a separate stylesheet */
+
+/* Styling for tokens */
+.token {
+  background-color:rgb(26, 65, 81);
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.token:hover {
+  background-color:rgb(26, 65, 81);
+}
+
+/* Styling for the popup */
+#order-details-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 90px; /* Add padding to the container */
+}
+
+.order-details {
+  margin-bottom: 15px;
+}
+
+/* Style for the scrollbar */
+#order-details-popup::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style for the scrollbar thumb (the draggable part) */
+#order-details-popup::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the thumb */
+  border-radius: 6px; /* Round the corners of the thumb */
+}
+
+/* Optional: Style for the scrollbar thumb when hovered */
+#order-details-popup::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the color of the thumb on hover */
+}
+
+#order-details-container {
+  background-color: #fff;
+  padding: 20px;
+  
+  border-radius: 10px;
+  /* margin-top: 20px; */
+  /* max-width: 600px; */
+  position: relative;
+  top: 15%;
+  left: 11%;
+  max-width: 60%;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 4;
+}
+
+/* Close button in the popup */
+#order-details-popup button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#order-details-popup button:hover {
+  background-color: #c0392b;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  
+}
+/* Add this CSS in your style or in a separate stylesheet */
+
+/* Styling for user details */
+#user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#user-details {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for tokens */
+#tokens-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.user-tokens{
+  position: relative;
+  top: 3%;
+  
+}
+
+#user-tokens-container{
+  padding: 5%;
+  /* margin-bottom: 2vh; */
+  
+}
+
+.token {
+  background-color:rgba(26, 65, 81, 0.9);
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.token:hover {
+  background-color: rgba(26, 65, 81, 0.699);
+}

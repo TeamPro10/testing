@@ -1,0 +1,991 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height: 130%;
+    filter: brightness(100%) contrast(106%);
+}
+
+.maincontainer {
+    height: 98vh;
+    width: 100%;
+
+    background-color: rgb(217, 217, 215);
+}
+
+/* .innercontainer img{
+    filter: brightness(80%) contrast(106%);
+} */
+.innercontainer nav img {
+    position: relative;
+    right: 22%;
+    filter: saturate(110%);
+}
+
+.innercontainer nav span {
+    position: relative;
+    right: 22%;
+    /* filter: saturate(110%); */
+}
+
+#im2 {
+    /* width: 4%; */
+    border: 0px solid transparent;
+    position: relative;
+    left: 24%;
+
+}
+
+.innercontainer nav {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    /* left: 10px; */
+    height: 5%;
+    width: 98.8%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+
+
+}
+
+.innercontainer nav a {
+    font-size: medium;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color: rgb(110, 100, 100);
+    padding: 1%;
+    margin-left: 4%;
+    position: relative;
+    right: 3%;
+
+
+}
+
+.innercontainer nav a:hover {
+    color: rgb(26, 65, 81);
+    -webkit-text-stroke: .4px rgb(26, 65, 81);
+    border-bottom: 4px solid rgb(26, 65, 81);
+}
+
+.asi {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 10vh;
+    width: 2vw;
+    border: solid 3px rgb(26, 65, 81);
+
+    background-color: transparent;
+    position: fixed;
+    top: 48vh;
+    border-radius: 8%;
+    right: 0;
+}
+
+.i {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+.i1 {
+    position: relative;
+    top: 1vh;
+
+}
+
+#lg1 {
+    border-radius: 4px;
+    /* height:"100%"; */
+    width: 60%;
+}
+
+#lg2 {
+    position: relative;
+    right: .2px;
+    width: 57%;
+}
+
+#lg3 {
+    border-radius: 4px;
+    width: 56%;
+}
+
+#lg1:hover:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+
+}
+
+.i2 {
+    position: relative;
+    top: 1.3vh;
+    /* left: 1vw; */
+}
+
+#lg2:hover {
+    background: #FF0000;
+    border-radius: 8px;
+}
+
+.i3 {
+    position: relative;
+    top: 1.5vh;
+}
+
+#lg3:hover {
+    background: #0e76a8;
+}
+
+.innercontainer2 {
+    height: 40vh;
+    width: 30vw;
+    position: relative;
+    top: 35vh;
+    left: 6vw;
+    padding: 4%;
+    /* background-color: bisque; */
+}
+
+.innercontainer2 h1 {
+    font-size: 6em;
+    -webkit-text-stroke: 2px rgb(45, 41, 41);
+    color: rgb(26, 65, 81);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#ss {
+
+    position: relative;
+    bottom: 40%;
+    /* left:%; */
+
+}
+
+.innercontainer3 {
+    height: 50vh;
+    width: 32vw;
+    position: relative;
+    bottom: 45vh;
+    left: 50vw;
+    padding: 4%;
+
+    /* background-color: bisque; */
+}
+
+.s {
+    width: 45%;
+    height: 60%;
+    border-radius: 100%;
+    /* background-color: rgb(26, 65, 81); */
+
+}
+
+.s img {
+    width: 85%;
+    /* height: 60%; */
+    border: 7px solid rgb(26, 65, 81);
+    border-radius: 100%;
+    position: relative;
+    left: 8%;
+    top: 5%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.s1 {
+    position: relative;
+    left: 1%;
+}
+
+.s2 {
+    position: relative;
+    left: 40%;
+    bottom: 60%;
+}
+
+.s3 {
+    position: relative;
+    left: 20%;
+    bottom: 72%;
+}
+
+.maincontainer2 {
+    /* height: 170vh; */
+    width: 100%;
+    padding: 3% 0;
+    /* z-index: 1; */
+
+    background-color: whitesmoke;
+}
+
+.maincontainer2 h1 {
+    -webkit-text-stroke: 2px rgb(45, 41, 41);
+    color: rgb(26, 65, 81);
+    position: relative;
+    left: 15%;
+    top: 6%;
+    /* margin: 10px; */
+    /* height: 10vh; */
+    width: 60%;
+}
+
+.maincontainer2 h2 {
+    /* -webkit-text-stroke: 2px rgb(45, 41, 41); */
+    color: rgb(26, 65, 81);
+    position: relative;
+    left: 15%;
+    top: 6%;
+    margin: 10px;
+    width: 60%;
+
+
+}
+
+.bar {
+    display: none;
+}
+
+#im3 {
+    display: none;
+}
+
+#logo2 {
+    display: none;
+}
+#cart {
+    display: none;
+}
+
+#lgospn {
+    display: none;
+}
+
+/* ##########################content############################ */
+.content-container {
+    width: 88vw;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-gap: 1%;
+    padding: 4%;
+}
+.content-container h2{
+    margin-top: 10px;
+}
+.menu h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:600;
+    font-size: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 4%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: #f0f0f0;
+}
+.menu ul {
+    margin-top: 10%;
+    padding: 3%;
+    line-height: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.fooditem-list ,.veg-nonveg {
+    border: 1px solid rgb(26, 65, 81);
+    color: rgb(26, 65, 81);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#veg-nonveg li {
+    width: 16vw;
+    border: 1px solid rgb(26, 65, 81);
+    color: rgb(26, 65, 81);
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#for-mobile-interface {
+    display: none;
+}
+
+#up-arrow {
+    display: none;
+    float: right;
+    cursor: pointer;
+}
+
+#up-arrow2 {
+    display: none;
+    float: right;
+    cursor: pointer;
+}
+
+#down-arrow {
+    float: right;
+    cursor: pointer;
+}
+
+#down-arrow2 {
+    float: right;
+    cursor: pointer;
+}
+
+#menu-list {
+    display: none;
+    transform: translateX(-680px);
+}
+
+#veg-nonveg-category {
+    display: none;
+    transform: translateX(-680px);
+}
+
+.fooditems-display {
+    box-sizing: border-box;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 0.5%;
+    padding: 8%;
+    overflow: auto;
+    scrollbar-width: thin; /* "auto" or "thin" for Firefox support */
+    scrollbar-color: #333333 #eeeeee; /* Change the scrollbar colors */
+}
+
+.fooditems-display::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+.fooditems-display::-webkit-scrollbar-thumb {
+    background-color: #333333; /* Set the color of the thumb */
+    border-radius: 6px; /* Set the border-radius of the thumb */
+}
+
+.fooditems-display::-webkit-scrollbar-thumb:hover {
+    background-color: #555555; /* Set the color of the thumb on hover */
+}
+
+.fooditems-display::-webkit-scrollbar-track {
+    background-color: #eeeeee; /* Set the color of the track */
+}
+
+.fooditems-display::-webkit-scrollbar-track:hover {
+    background-color: #dddddd; /* Set the color of the track on hover */
+}
+
+
+.food-item {
+    /* width: 13vw; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 5%;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    padding: 5%;
+    line-height: 25px;
+    /* height: 20vh; */
+}
+.food-item2 {
+    /* width: 13vw; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 5%;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    padding: 5%;
+    line-height: 25px;
+    height: 24vh;
+}
+.food-item-content{
+    height: 100vh;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    margin-top: 5%;
+    /* border-radius: 10px; */
+    /* border: 2px solid black; */
+    padding: 5%;
+    line-height: 25px;
+}
+
+.food-item h2 {
+    color: rgb(26, 65, 81);
+}
+
+.food-item h4 {
+    color: rgb(26, 65, 81);
+}
+
+#veg-nonveg {
+    width: 10%;
+}
+
+#add {
+    padding: 3%;
+    float: right;
+    border: 1px solid rgb(26, 65, 81);
+    background-color: rgb(26, 65, 81);
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 5vw;
+}
+
+#movetocart {
+    margin-top: 10%;
+    width: 10vw;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    border: 1px solid yellowgreen;
+
+}
+
+#movetocart a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #323030;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgb(26, 65, 81);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.right-end-content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.right-end-content h2 {
+    margin-bottom: 5%;
+}
+
+.foot {
+    height: 30vh;
+    width: 100%;
+    color: white;
+    background-color: rgb(26, 65, 81);
+    z-index: 9;
+}
+
+.foot img {
+    margin: 10px;
+
+}
+
+.foot span {
+    position: relative;
+    bottom: 10%;
+    font-weight: normal;
+
+}
+
+.foot p {
+    width: 50%;
+    position: relative;
+    top: 10%;
+    left: 40%;
+    padding: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.foot p a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CSS styles for the quantity section */
+.heighest-ordered-food-item .quantity,
+.food-item2  .quantity,
+.food-item .quantity {
+    display: flex;
+    align-items: center;
+}
+
+/* CSS styles for the minus button */
+.heighest-ordered-food-item .minus,
+.food-item2  .minus,
+.food-item .minus {
+    background-color: rgb(26, 65, 81);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+
+/* CSS styles for the plus button */
+.heighest-ordered-food-item .plus,
+.food-item2  .plus,
+.food-item .plus {
+    background-color: rgb(26, 65, 81);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+
+/* CSS styles for the input box */
+.heighest-ordered-food-item .input-box,
+.food-item2  .input-box,
+.food-item .input-box {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 3px;
+}
+.food-item2 button{
+    position: relative;
+    bottom: 18%;
+}
+
+.scroll-container {
+    display: none;
+}
+
+.content {
+   
+    display: none;
+    
+}
+.content2{
+    /* width: 2000px; */
+    height: 100vh;
+    padding: 5%;
+    background-color: #f0f0f0;
+
+    display: flex;
+    flex-direction: column; 
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        display: none;
+    }
+
+    .nav span {
+        display: none;
+    }
+
+    #img1 {
+        width: 12%;
+    }
+
+    #im2 {
+        display: none;
+    }
+
+    #im3 {
+        display: block;
+        position: relative;
+        left: 10px;
+    }
+
+    .nav {
+        z-index: 3;
+        height: 8vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: white;
+    }
+
+    .maincontainer {
+        overflow: hidden;
+    }
+
+    .innercontainer .nav1 {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        /* border-radius: 100%; */
+        height: 100vh;
+        width: 70vw;
+        z-index: 9;
+        transform: translateX(-380px);
+        transition: transform 0.5s ease-in-out;
+
+    }
+
+    .innercontainer2 {
+        position: relative;
+        top: 20%;
+        width: 80%;
+        height: 34%;
+    }
+
+    .innercontainer2 h1 {
+        /* font-size: 80px; */
+        z-index: 1;
+        font-size: 4.5em;
+        position: relative;
+        /* left: 10%; */
+        top: 30%;
+    }
+
+    .maincontainer2 h2 {
+        margin: 0;
+    }
+
+    .innercontainer2 p {
+        position: relative;
+        left: 5%;
+        top: 34%;
+        width: 65%;
+    }
+
+    .innercontainer3 {
+        display: none;
+    }
+
+    .asi {
+        position: fixed;
+        right: 2%;
+        height: 11vh;
+        width: 8vw;
+    }
+
+    .i2 {
+        position: relative;
+        bottom: 70vh;
+    }
+
+    #lg1 {
+
+
+        width: 70%;
+    }
+
+    #lg3 {
+
+
+        width: 70%;
+    }
+
+    #lg2 {
+
+        width: 70%;
+    }
+
+    .i3 {
+        position: relative;
+        bottom: 51vh;
+    }
+
+    #bar {
+        display: block;
+        position: fixed;
+        top: 0px;
+        /* background-color: rgb(39, 40, 41); */
+        background-color: white;
+        border: 2.4px solid rgb(109, 107, 107);
+        width: 5vw;
+        height: 2.3vh;
+        padding: 1vh;
+        border-radius: 3px;
+        margin: 14px;
+        cursor: pointer;
+        z-index: 4;
+        transition: .3s ease;
+    }
+
+    #bar1 {
+        position: relative;
+        top: 2px;
+        bottom: 18px;
+
+        width: 5vw;
+        height: .6vh;
+        margin-bottom: 2px;
+        border-radius: 3px;
+        background-color: #323030;
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+
+    }
+
+    #bar2 {
+        position: relative;
+        bottom: 18px;
+        top: 2px;
+        width: 5vw;
+        height: .6vh;
+        margin-bottom: 2px;
+
+        border-radius: 3px;
+        background-color: #323030;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #bar3 {
+        position: relative;
+        bottom: 18px;
+        top: 2px;
+
+        width: 5vw;
+        height: .6vh;
+
+        border-radius: 3px;
+        background-color: #323030;
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #checkbox {
+        opacity: 0%;
+        /* width: 10px;
+        height: 10px; */
+        /* padding: 50px; */
+        display: block;
+        height: 32px;
+        width: 30px;
+        position: fixed;
+        left: 4vw;
+        top: 2.5vh;
+        z-index: 5;
+        cursor: pointer;
+
+
+    }
+
+    .maincontainer .innercontainer input[type="checkbox"]:checked~.nav .nav1 {
+        transform: translateX(0px);
+    }
+
+    input[type="checkbox"]:checked~.bar #bar1 {
+        transform: rotate(45deg);
+        position: relative;
+        left: 4px;
+    }
+
+    input[type="checkbox"]:checked~.bar #bar2 {
+        transform: scaleY(0);
+    }
+
+    input[type="checkbox"]:checked~.bar #bar3 {
+        transform: rotate(-45deg);
+        position: relative;
+        left: 4px;
+    }
+
+    .maincontainer2 h1 {
+        position: relative;
+        top: 7vh;
+    }
+
+    .maincontainer2 h2 {
+        position: relative;
+        top: 7vh;
+    }
+
+    #logo2 {
+        display: block;
+        position: relative;
+        left: 88%;
+        bottom: 6%;
+    }
+
+    #cart {
+        display: block;
+        position: relative;
+        left: 58%;
+        top: 39%;
+    }
+
+    #lgospn {
+        display: block;
+        margin-right: 70%;
+        position: relative;
+        left: 69%;
+        bottom: 48%;
+    }
+
+    /* **********************************content**************************************** */
+    .content-container {
+        /* height: auto; */
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #for-mobile-interface {
+        display: block;
+    }
+
+    .fooditems-display {
+        border: 1.5px solid rgb(249, 248, 248);
+        overflow: scroll;
+        /* height: auto; */
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #count{
+        /* padding: 1px; */
+        position: relative;
+        left: 5px;
+        z-index: 7;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #cart-sts{
+       
+       
+        display: none;
+        position: absolute;
+        top: 22px;
+
+        left: 62.5%;
+        /* z-index: 6; */
+        border-radius: 100%;
+        width: 3.5%;
+        height: 25%;
+    }
+
+    .food-item {
+        height: 45vw;
+        margin-top: 0%;
+        border-radius: 10px;
+        /* border: 2px solid black; */
+        padding: 5%;
+        line-height: 25px;
+        margin-top: 0%;
+    }
+    .heighest-ordered-food-item #add{
+        position: relative;
+        bottom: 0%;
+        /* left: 5%; */
+    }
+
+    .right-end-content {
+        display: none;
+    }
+
+    #veg-nonveg li {
+        width: 82vw;
+    }
+
+    .menu ul {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+    }
+
+    #add {
+        position: relative;
+        /* right: 10%; */
+        bottom: 25%;
+        width: 40%;
+    }
+
+    #movetocart {
+        width: auto;
+    }
+
+
+
+    /* Create a container div that will scroll horizontally */
+    .scroll-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        /* flex-direction: row; */
+    }
+
+    /* Your content div inside the scroll container */
+    .content {
+        width: 2000px;
+        padding: 5%;
+        background-color: #f0f0f0;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .heighest-ordered-food-item {
+        width: 70vw;
+        position: relative;
+        /* left: -28%; */
+        top: 5%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        margin-top: 0px;
+        margin: 2%;
+        border-radius: 10px;
+        /* border: 2px solid black; */
+        padding: 2%;
+        line-height: 25px;
+        /* height: 20vh; */
+    }
+
+    /* .heighest-ordered-food-item #veg-nonveg { */
+    /* width: 1%; */
+    /* } */
+    /* **************************************************************************************** */
+    .foot p {
+
+        position: relative;
+
+        left: 15%;
+    }
+
+    .food hr {
+        position: relative;
+        right: 15%;
+        /* background-color: rgba(118, 117, 117, 0.733); */
+        width: 120%;
+    }
+    .notification {
+        display: none;
+        position: fixed;
+        bottom: 35%;
+        left: 22%;
+    }
+
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="innercontainer">
+        <input type="checkbox" name="" id="checkbox">
+        <div id="bar" class="bar">
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+        </div>
+        <div class="nav">
+            <img src="../Images/logo.png" alt="no_img" id="logo2" width="10%">
+            <span id="lgospn">FoodCourt</span>
+            <nav class="nav1">
+                <img src="../Images/logo.png" alt="no_img" id="logo">
+                <span>FoodCourt</span>
+                <a href="./index">Home</a>
+                <!-- <a href="#order-page">Menu</a> -->
+                <a href="/Order">Cart</a>
+                <a href="#" id="loginsts" onclick="redirectToLogin()"></a>
+            </nav>
+        </div>
+    </div>    
+        <div class="container">
+            <!-- profile-side -->
+            <div class="profile-container">
+                <div class="image-part">
+                    <img src="../Images/logo.png" alt="profile_img" width="200vw">
+                </div>
+                <div class="profile-info">
+                    <table class="profile-table">
+                        <tr>
+                            <td>Name:</td>
+                            <td id="name"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td id="Email"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone:</td>
+                            <td id="phno"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- user-order-summary -->
+            <div>
+                <div class="user-tokens">
+                    <center><h2>Your Orders:</h2></center>
+                    <div id="user-tokens-container"></div>
+                </div>
+                <div id="order-details-popup" style="display: none;">
+                    <div id="order-details-container"></div>
+                    
+                </div>
+            
+                <!-- Order Details Popup -->
+                <div class="popup" id="order-details-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                        <div id="order-details-container"></div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            
+            <!-- <div class="summary-part">
+                
+                <div class="container2">
+                    <div class="token-container">
+                        <h2 id="Token">1</h2>
+                    </div>
+                    <button class="dropdown-button" onclick="toggleDropdown()">Show Details</button>
+                    <div class="content-container" id="dropdown-content" style="display: none;">
+                        <div class="summary-content">
+                            <div class="order-info">
+                                <div class="food-info">
+                                    <table>
+                                        <tr class="fq-cell">
+                                            <td class="food-cell" id="item"></td>
+                                            <td class="quantity-cell">Quantity:<span id="qnty"></span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="bill-info">
+                                    <p class="bill-cell">
+                                        Bill Amount: <span id="rupees"></span> <br>
+                                        Payment Status:<span style="font-weight: bold;" id="pay-stats"> </span><br>
+                                        Order Status: <span style="font-weight: bold;" id="ord-stats"></span><br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-amount-container">
+                            <p>Total Amount: <span id="total-amount"></span></p>
+                        </div>
+                    </div>
+                </div> -->
+                <img src="../Images/nodataimg/3009287.jpg" alt="no_img" width="50%" id="nodatafound">
+        </div>
+        
+    
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdown-content");
+            if (dropdownContent.style.display === "none") {
+                dropdownContent.style.display = "block";
+            } else {
+                dropdownContent.style.display = "none";
+            }
+        }
+
+        function searchToken() {
+            var input, filter, container, tokens, token, i, tokenValue;
+            input = document.getElementById('token-search');
+            filter = input.value.toUpperCase();
+            container = document.querySelector('.summary-part');
+            tokens = container.getElementsByClassName('token-container');
+            for (i = 0; i < tokens.length; i++) {
+                token = tokens[i].getElementsByTagName('h2')[0];
+                tokenValue = token.textContent || token.innerText;
+                if (tokenValue.toUpperCase() === filter) {
+                    tokens[i].style.display = '';
+                } else {
+                    tokens[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+    <script src="../js/connection_db.js"></script>
+    <!-- <script src="../js/disableinspect.js"></script> -->
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

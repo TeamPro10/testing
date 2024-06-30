@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="../css/Details.css">
+    <link rel="stylesheet" href="../css/AdminDashboard.css">
+</head>
+<body>
+  <div class="navbar">
+    <img src="../Images/icons8-hamburger-24.png" alt="no_img" id="hamburger-open">
+    <img src="../Images/icons8-cancel-50.png" alt="no_img" id="hamburger-cancel">
+    <div class="sidebar">
+      <div class="element">
+        <img src="../Images/icons8-forward-24.png" alt="no_img">
+        <span>
+          <h3 id="item1"><a href="/AdminDashboard">Home</a></h3>
+        </span>
+      </div>
+     
+      <div class="element">
+        <img src="../Images/icons8-forward-24.png" alt="no_img">
+        <span>
+          <h3 ><a href="/Detail">Details</a></h3>
+        </span>
+      </div>  
+    </div>
+    <div class="navbar-text">Admin Dashboard</div>
+    <button class="logout-button">Log Out</button>
+  </div>
+
+
+    <div class="dashboard-right">
+        <h2>One Week Order Details</h2>
+        <table class="table-checked tbody">
+          <thead>
+            <tr>
+              <th>Sl No</th>
+              <th>Token Number</th>
+              <th>E-mail</th>
+              <th>Item Name</th>
+              <th>Total Amount</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table body content will be added dynamically through JavaScript -->
+          </tbody>
+        </table>
+      </div><br>
+      <button id="download_btn" onclick="downloadpdf()">Download PDF</button>
+      <button id="clear_btn" onclick="clearData()">Clear Entries</button>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <script src="../js/connection_db.js"></script>
+    <script src="../js/Detail.js"></script>
+    <!-- <script src="../js/AdminDashboard.js"></script> -->
+</body>
+</html>
